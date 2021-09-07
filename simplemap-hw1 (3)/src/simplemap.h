@@ -17,7 +17,7 @@
 
 template <class K, class V>
 class simplemap_t {
-    unordered_map < int, float >simplemap;
+
     // Define the two vectors of types K and V
 	// << use std::vector<K> >>
 

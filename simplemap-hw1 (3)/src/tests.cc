@@ -9,117 +9,14 @@
 #include <ctime>
 #include "config_t.h"
 #include "tests.h"
-#include <unordered_map>
 
 #include "simplemap.h"
 
 	    void printer(int k, float v) {
 			std::cout<<"<"<<k<<","<<v<<">"<< std::endl;
 	}
-int initialize_map ()
-{
-  unordered_map < int, float >simplemap;
-  // Declaring simplemap_t to be of <string, double> type
-  // key will be of int  type and mapped value will be type float
 
-  // inserting values by using [] operator\
-  int sum = 0;
-  int maxSum = 100000;
-  int i = 0;
-  int sum = 0;
-  int random_integer;
-  int lowest = 10, highest = 1000;
-  int range = (highest - lowest) + 1;
-  while (sum != maxSum || sum < maxSum)
-    {
-      int value = lowest + rand () % range;
-      if ((sum + value) <= maxSum)
-	{
-	  simplemap.insert (make_pair (i, value));
-	  sum = sum + value;
-	}
-      else if ((sum + value) > maxSum)
-	{
-	  if (sum < maxSum)
-	    {
-	      value = maxSum - sum;
-	      simplemap.insert (make_pair (i, value));
-	      sum = sum + value;
-	    }
-	  else if (sum > maxSum);
-	}
-      i++;
-    }
-  printf ("%d",sum);
-
-
-  //string key = "PI";
-
-  // If key not found in map iterator to end is returned
-  // if (umap.find(key) == umap.end())
-  //     cout << key << " not found\n\n";
-
-  // If key found then iterator to that key is returned
-  // else
-  //     cout << "Found " << key << "\n\n";
-
-  // key = "lambda";
-  // if (umap.find(key) == umap.end())
-  //     cout << key << " not found\n";
-  // else
-  //     cout << "Found " << key << endl;
-
-  //    iterating over all value of umap
-  int bankSum = 0;
-  unordered_map < int, float >::iterator itr;
-  cout << "\nAll Elements : \n";
-  for (itr = simplemap.begin (); itr != simplemap.end (); itr++)
-    {
-      // itr works as a pointer to pair<string, double>
-      // type itr->first stores the key part  and
-      // itr->second stores the value part
-      cout << itr->first << "  " << itr->second << endl;
-      bankSum += itr->second;
-    }
-    printf ("%d\n", bankSum);
-    int mapSize = simplemap.size();
-    printf("%d", mapSize);
-    return simplemap.size();
-}
-
-void transaction (int key1, int key2, float ammount){
-    
-}
-int main ()
-{
-  
-}
 	void run_custom_tests(config_t& cfg) {
-
-    // Declaring simplemap_t to be of <string, double> type
-    // key will be of int  type and mapped value will be type float
- 
-    // inserting values by using [] operator\
-	int sum = 0;
-
- 
-    //string key = "PI";
- 
-    // If key not found in map iterator to end is returned
-    // if (umap.find(key) == umap.end())
-    //     cout << key << " not found\n\n";
- 
-    // If key found then iterator to that key is returned
-    // else
-    //     cout << "Found " << key << "\n\n";
- 
-    // key = "lambda";
-    // if (umap.find(key) == umap.end())
-    //     cout << key << " not found\n";
-    // else
-    //     cout << "Found " << key << endl;
- 
-    //    iterating over all value of umap
 		// Step 1
 		// Define a simplemap_t of types <int,float>
 		// this map represents a collection of bank accounts:
@@ -130,24 +27,6 @@ int main ()
 		// Populate the entire map with the 'insert' function
 		// Initialize the map in a way the sum of the amounts of
 		// all the accounts in the map is 100000
-
-		/*int sum = 0;
-		int maxSum = 100000;
-		i = 0;
-		while sum != maxSum ||  sum < maxSum{
-			int value = random(between 10 and 1000);
-			if((sum + value) <= maxSum){
-				insert(i, value);
-				sum = sum + value;
-			}
-			elseif((sum + value)> maxSum){
-				if (sum < maxSum){
-					value = maxSum - sum;
-				}
-				elseif(sum > maxSum)
-			}
-		i++;
-		}*\
 
 		// Step 3
 		// Define a function "deposit" that selects two random bank accounts
