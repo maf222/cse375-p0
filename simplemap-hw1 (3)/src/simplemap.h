@@ -82,8 +82,5 @@ class simplemap_t {
 
     // Apply a function to each key in the map
     void apply(void (*f)(K, V)) {
-    	for (auto i : *keys) {
-    		f(i, values->at(i));
     	}
-    }
 };

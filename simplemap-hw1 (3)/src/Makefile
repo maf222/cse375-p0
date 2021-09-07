@@ -10,7 +10,7 @@
 
 # This defaults bits to 32, but allows it to be overridden on the command
 # line
-BITS = 32
+BITS = 64
 
 # Output directory
 ODIR  = obj32
