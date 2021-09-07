@@ -101,21 +101,6 @@ int main ()
  
     // inserting values by using [] operator\
 	int sum = 0;
-		int size = initialize_map ();
-   int random_integer;
-  int lowestVal = 10, highestVal = 1000;
-  int rangeVal = (highestVal - lowestVal) + 1;
-   float ammount = lowestVal + rand () % rangeVal;
-    int lowest = 0;
-    int highest = size;
-    int range = (highest - lowest) + 1;
-    int key1 = lowest + rand () % range;
-    int key2 = lowest + rand () % range;
-    while (key1 == key2){
-        key2 = lowest + rand () % range;
-    }
-    transaction(key1, key2, ammount);
-  return 0;
 
  
     //string key = "PI";
