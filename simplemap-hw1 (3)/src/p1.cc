@@ -10,6 +10,7 @@
 #include <string>
 #include <unistd.h>
 
+#include "simplemap.h"
 #include "config_t.h"
 #include "tests.h"
 
@@ -46,10 +47,31 @@ int main(int argc, char** argv) {
     config_t config;
     parseargs(argc, argv, config);
     config.dump();
-
+   simplemap_t<class K, class V>
+   //simple_map.init(config.key_max, config.iters, config.threads);
+    void simplemap_t<K, V>::insert(K 1, V 10);
     // crash if the iterations are negative
     assert(config.iters > 0);
+//   int mapSize = simplemap.size ();
+//   //printf ("map size: %d\n", mapSize);
+//   int random_integer2;
+//   int lowestVal = 1, highestVal = 10;
+//   int rangeVal = (highestVal - lowestVal) + 1;
 
+//   int lowest2 = 0;
+//   int highest2 = mapSize;
+//   int range2 = (highest2 - lowest2) + 1;
+//   srand ((unsigned int) time (NULL));
+//   float ammount = lowestVal + rand () % rangeVal;
+//   srand ((unsigned int) time (NULL));
+//   int key1 = lowest2 + rand () % range2;
+//   srand ((unsigned int) time (NULL));
+//   int key2 = lowest2 + rand () % range2;
+//   while (key1 == key2)
+//     {
+//       srand ((unsigned int) time (NULL));
+//       key2 = lowest2 + rand () % range2;
+//     }
     // launch the tests
     test_driver(config);
 }
