@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 #include <unistd.h>
-
+#include <unordered_map>
 #include "simplemap.h"
 #include "config_t.h"
 #include "tests.h"
@@ -40,16 +40,19 @@ void parseargs(int argc, char** argv, config_t& cfg) {
         }
     }
 }
-
+void insert(K key, V val, std::unordered_map < int, float >&map);
 // The main routine simply parses the arguments, dumps the arguments, populates the
 int main(int argc, char** argv) {
     // get the configuration, print it
+    printf("testing");
+    usage();
     config_t config;
     parseargs(argc, argv, config);
     config.dump();
-   simplemap_t<class K, class V>
+    std::unordered_map<K, V>map;
+   //simplemap_t<class K, class V>
    //simple_map.init(config.key_max, config.iters, config.threads);
-    void simplemap_t<K, V>::insert(K 1, V 10);
+    void simplemap_t::insert(1, 10, map);
     // crash if the iterations are negative
     assert(config.iters > 0);
 //   int mapSize = simplemap.size ();

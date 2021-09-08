@@ -15,12 +15,12 @@
 #include <cassert>
 #include <unordered_map>
 
-using namespace std;
+//using namespace std;
 
-template <class K, class V>
+//template <class K, class V>
 class simplemap_t
 {
-    unordered_map<K, V> map;
+    //std::unordered_map<K, V> map;
         // Define the two vectors of types K and V
         // << use std::vector<K> >>
 
@@ -35,23 +35,23 @@ class simplemap_t
     // Insert (key, val) if and only if the key is not currently present in
     // the map.  Returns true on success, false if the key was
     // already present.
-    bool insert(K key, V val)
+    void insert(K key, V val, std::unordered_map < int, float >&map)
     {
 
         if (!map.insert({key, val}).second)
         {
         }
-        unordered_map<int, float>::iterator itr;
-        cout << "\nAll Elements : \n";
+        std::unordered_map<int, float>::iterator itr;
+        std::cout << "\nAll Elements : \n";
         for (itr = map.begin(); itr != map.end(); itr++)
         {
             // itr works as a pointer to pair<string, double>
             // type itr->first stores the key part  and
             // itr->second stores the value part
-            cout << itr->first << "  " << itr->second << endl;
+            std::cout << itr->first << "  " << itr->second << std::endl;
             //bankSum += itr->second;
         }
-        return true;
+        //return true;
 
         // The following is just an example of using C++11 features,
         // like the 'auto' type and lambda expression
@@ -104,8 +104,8 @@ class simplemap_t
     int balance()
     {
         int bankSum = 0;
-        unordered_map<int, float>::iterator itr;
-        cout << "\nAll Elements : \n";
+        std::unordered_map<int, float>::iterator itr;
+        std::cout << "\nAll Elements : \n";
         for (itr = map.begin(); itr != map.end(); itr++)
         {
             // itr works as a pointer to pair<string, double>
